@@ -5,16 +5,15 @@
     ],
     "python.analysis.ignore": [
         "boto3",
-        "botocore",
+        "botocore", 
         "strands",
         "strands_tools",
         "**/strands_tools/**",
         "**/strands/**"
-    ]
-    
+    ],
     "python.linting.ignorePatterns": [
         "Import * could not be resolved"
-    ]
+    ],
     "python.analysis.autoImportCompletions": false,
     "python.analysis.diagnosticMode": "workspace"
-}   
+}
