@@ -1,0 +1,35 @@
+{
+  "marketing_campaign_basic": {
+    "httpMethod": "POST",
+    "body": {
+      "user_id": "marketing_test_001",
+      "message": "Generate personalized marketing messages for these customers",
+      "agent_type": "marketing_campaign_agent",
+      "context": "Customer 1: John Doe at TechCorp (CEO)\nCustomer 2: Jane Smith at HealthInc (Director)\nOffering: AI Platform for healthcare, $25k investment"
+    }
+  },
+  
+  "marketing_campaign_batch": {
+    "httpMethod": "POST", 
+    "body": {
+      "user_id": "marketing_test_002",
+      "message": "Create comprehensive B2B outreach campaign with personalized messages for multiple customer segments",
+      "agent_type": "marketing_campaign_agent",
+      "context": "Large customer list with 50+ prospects across Technology, Healthcare, and Finance industries. Need both quick-connect and detailed value proposition messages."
+    }
+  },
+  
+  "simple_chat": {
+    "httpMethod": "POST",
+    "body": {
+      "user_id": "test_user_001",
+      "message": "Hello! How can I improve my marketing campaigns?",
+      "agent_type": "ai_chat_agent"
+    }
+  },
+  
+  "poll_request": {
+    "httpMethod": "GET",
+    "path": "/poll/abc123def456"
+  }
+}

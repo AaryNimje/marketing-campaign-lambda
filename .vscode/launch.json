@@ -1,0 +1,24 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Test Lambda Locally",
+            "type": "python",
+            "request": "launch",
+            "program": "test_local.py",
+            "console": "integratedTerminal",
+            "env": {
+                "AWS_REGION": "eu-west-2",
+                "ENVIRONMENT": "development"
+            }
+        },
+        {
+            "name": "Debug Marketing Campaign",
+            "type": "python",
+            "request": "launch",
+            "program": "lambda_function.py",
+            "console": "integratedTerminal",
+            "args": ["--test-marketing"]
+        }
+    ]
+}

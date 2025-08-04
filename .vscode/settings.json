@@ -1,0 +1,11 @@
+{
+    "python.defaultInterpreterPath": "./venv/bin/python",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.formatting.provider": "autopep8",
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/node_modules": true,
+        "lambda-package": false
+    }
+}
