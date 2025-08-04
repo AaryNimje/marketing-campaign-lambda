@@ -1,11 +1,20 @@
 {
     "python.defaultInterpreterPath": "./venv/bin/python",
-    "python.linting.enabled": true,
-    "python.linting.pylintEnabled": true,
-    "python.formatting.provider": "autopep8",
-    "files.exclude": {
-        "**/__pycache__": true,
-        "**/node_modules": true,
-        "lambda-package": false
-    }
-}
+    "python.analysis.extraPaths": [
+        "/mnt/efs/envs/strands_lambda/lib/python3.11/site-packages"
+    ],
+    "python.analysis.ignore": [
+        "boto3",
+        "botocore",
+        "strands",
+        "strands_tools",
+        "**/strands_tools/**",
+        "**/strands/**"
+    ]
+    
+    "python.linting.ignorePatterns": [
+        "Import * could not be resolved"
+    ]
+    "python.analysis.autoImportCompletions": false,
+    "python.analysis.diagnosticMode": "workspace"
+}   

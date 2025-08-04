@@ -144,4 +144,10 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 
+# Local development mocks
+mock_strands.py
+.vscode/settings.json
+
+# VS Code
+.vscode/
 #

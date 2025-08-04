@@ -589,7 +589,8 @@ class EnhancedCacheManager:
         """Get full response data from response table"""
         if not self.response_table:
             return None
-            
+        
+        item = None
         try:
             response = self.response_table.get_item(Key={'request_hash': request_hash})
             if 'Item' in response:
@@ -652,7 +653,7 @@ class EnhancedCacheManager:
             self._update_cache_status(request_hash, 'failed', error=str(e))
         """Save error information"""
         try:
-            error_msg = str(error)
+            error_msg = str(e)
             self._update_cache_status(request_hash, 'failed', error=error_msg)
             self._update_progress(request_hash, 0, f'Request failed: {error_msg[:100]}')
             
@@ -2035,20 +2036,6 @@ Offering Details:
         "agent_type": "marketing_campaign_agent",
         "context": customer_context + offering_context
     }
-
-# No function name provided for this section, assuming it's part of a parsing block
-try:
-    result = {
-        'urls': json.loads(item.get('image_urls', '[]')),
-        'audio_urls': json.loads(item.get('audio_urls', '[]')),
-        'files_created': json.loads(item.get('files_created', '[]')),
-        'tools_used': json.loads(item.get('tools_used', '[]')),
-        'metadata': json.loads(item.get('metadata', '{}'))
-    }
-    # you can return result or use it below
-except Exception as e:
-    print(f"⚠️ Error getting response data: {e}")
-    result = None
 
     def _get_progress_data(self, request_hash):
         """Get latest progress data from progress table"""
